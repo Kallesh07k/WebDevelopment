@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css specificity and cascade</title>
+
+    <style>
+        pre{
+            color: red;
+        }
+        h1{
+            color: blue;
+        }
+        .new{
+            color: green;
+        }
+        [data-x="a"]{
+            color:rgb(125, 30, 30);
+        }
+
+        h3{
+            color: blue !important;
+        }
+    </style>
+</head>
+<body>
+    important> inline> id selector> class or attribute> element> universal
+    <pre>
+        Position and order of appearance: the order in which your CSS rules appear
+        Specificity: an algorithm that determines which CSS selector has the strongest match (inline > ID > class > element > universal)
+        Origin: the order in which CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS
+        Importance: some CSS rules are weighted more heavily than others, especially with the !important rule type
+    </pre>
+    <h1 class="new">i am new</h1>
+
+    <p class="class" data-x="a">Lorem ipsum dolor sit amet consectetur.</p>
+
+    <h3 style="color: red;">i am important</h3>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS selectors</title>
+    <style>
+        /* .box:nth-child(1){
+            background-color: red;
+        } */
+        /* .box::first-line{
+            color:yellow
+        } */
+        .boxes * {
+            color: blue;
+            border: 2px solid black;
+        }
+
+        [data-color="primary"] {
+            margin-top: 45px;
+            padding-top: 45px;
+            color: green;
+        }
+
+        .box:nth-child(even){
+            background-color: red;
+        }
+        .box:nth-last-child(1){
+            background-color: gray;
+        }
+        .boxes::before{
+            content: "hey i am before";
+        }
+        .boxes::after{
+            content: "hey i am after";
+        }
+        /* .box:hover{
+            background-color: aqua;
+            color: black;
+            cursor: pointer;
+        } */
+        ::selection{
+            background-color: black;
+            color: green;
+        }
+        .box::first-letter{
+            background-color: blue;
+            color: black;
+            font-size: 23px;
+        }
+        input::placeholder{
+            color:crimson
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            voluptates tempora nihil cupiditate quisquam. Aut nisi necessitatibus temporibus alias, rem facilis? Eaque
+            suscipit, optio aspernatur quasi a dicta facilis illum quaerat amet ipsam quod!</div>
+        <div class="box">Hey i am box</div>
+        <div class="box">Hey i am box</div>
+        <div class="box">Hey i am box</div>
+        <div class="box">Hey i am box</div>
+        <div class="box">Hey i am box</div>
+        <div class="box">Hey i am box</div>
+        <input type="text" placeholder="type your nme">
+    </div>
+</body>
+
+</html>

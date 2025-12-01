@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS fonts,text,color properties</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@100..900&display=swap');
+        h1{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 1230;
+            letter-spacing:2cm;
+        }
+        p{
+            font-family: "system-ui";
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            font-style: italic;
+            font-weight: 100;
+            font-size: larger;
+            text-decoration:underline;
+            line-height: 4;
+        }
+        h2{
+            text-transform: capitalize;
+            text-decoration: underline;
+            text-decoration-color: aqua;
+            background-color: red;
+            text-decoration-style: dotted;
+            text-decoration-thickness: 7px;
+            text-indent: 90px;
+        }
+        a:visited{
+            color: aquamarine;
+        }
+        a:hover{
+            background-color: aqua;
+        }
+        h2:hover{
+            background-color: blue;
+        }
+        .lorem{
+            border:2px solid black;
+            width: 120px;
+            padding: 10px;
+            text-overflow: ellipsis;
+            word-break: break-all;
+        }
+        *{
+            background-color: pink;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Fonts</h1>
+        <h2>this is about</h2>
+        <p style="text-align: center;">This is font</p>
+        <p>This is font</p>
+        <a href="https://www.google.com">Google</a>
+    </div>
+    <div class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo cumque aspernatur accusantium.z</div>
+</body>
+</html>

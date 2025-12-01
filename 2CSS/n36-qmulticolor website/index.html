@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multicolor Website</title>
+    <style>
+        :root{
+            --primary-color:rgb(255, 19, 133);
+            --text-color:white;
+            --secondary-color:rgb(254, 97, 173);
+        }
+        :root{
+            --primary-color:rgb(231, 235, 10);
+            --text-color:white;
+            --secondary-color:rgb(232, 234, 115);
+        }
+        :root{
+            --primary-color:rgb(18, 235, 10);
+            --text-color:white;
+            --secondary-color:rgb(129, 234, 115);
+        }
+        :root{
+            --primary-color:rgb(10, 220, 235);
+            --text-color:white;
+            --secondary-color:rgb(122, 228, 240);
+        }
+        body{
+            background-color: var(--secondary-color);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            background-color: var(--primary-color);
+            padding: 12px 0;
+        }
+        ul li{
+            list-style: none;
+            display: inline;
+            padding: 23px;
+            font-weight: bolder;
+        }
+        ul li a{
+            color: var(--text-color); 
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

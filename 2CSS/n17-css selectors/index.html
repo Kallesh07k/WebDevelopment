@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectors</title>
+    <style>
+        /* element selector */
+        div{
+            background-color: red;
+        }
+        
+        /* class selector */
+        .red{
+            background-color: yellow;
+        }
+
+        /* id selector */
+        #green{
+            background-color: green;
+        }
+
+        /* child selector */
+        div > p{
+            color: blue;
+            background-color: rgb(192, 255, 206);
+        }
+
+        /* descendant selector */
+        div  p{
+            color: blue;
+            background-color: rgb(222, 140, 154);
+        }
+
+        /* universal selector */
+        *{
+            margin: 0;
+            padding: 0;;
+        }
+
+        /* pseudo selector */
+        a:visited{
+            color: yellow;
+        }
+        a:link{
+            color: red;
+        }
+        a:active{
+            background-color: blue;
+        }
+        a:hover{
+            background-color: pink;
+        }
+        p:first-child{
+            background-color: aqua;
+        }
+        p:last-child{
+            background-color: rgb(33, 33, 218);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p>i am first</p>
+        <p>i am second</p>
+        <p>i am third</p>
+    </main>
+    <div>
+        i am a div
+    </div>
+
+    <div class="red">
+        i am anotehr div
+        <p>i am the para inside div</p>
+    </div>
+
+    <div class="red">
+        i am anotehr div
+        <span>
+            <p>i am the para inside div</p>
+        </span>
+    </div>
+
+    <p id="green">Lorem ipsum dolor sit amet.</p>
+
+    <a href="https://www.google.com">Go to Google</a>
+    <a href="https://www.youtube.com">Go to Youtube</a>
+</body>
+</html>
