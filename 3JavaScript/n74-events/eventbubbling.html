@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child{
+            padding: 34px;
+            margin:34px;
+            background-color: lightblue;
+            border:2px solid black;
+            cursor: pointer;
+        }
+        .childcontainer{
+            padding: 34px;
+            margin:34px;
+            background-color: rgb(126, 13, 101);
+            border:2px solid black;
+            cursor: pointer;
+        }
+        .container{
+            padding: 34px;
+            margin:34px;
+            background-color: rgb(29, 211, 90);
+            border:2px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="childcontainer">
+            <div class="child">
+                i am a child
+            </div>
+        </div>
+    </div>
+    <script >
+        document.querySelector(".child").addEventListener("click",(e)=>{
+            e.stopPropagation();
+            alert("you clicked child")
+        }) 
+        document.querySelector(".childcontainer").addEventListener("click",()=>{
+            e.stopPropagation();
+            alert("you clicked childcontainer")
+        }) 
+        document.querySelector(".container").addEventListener("click",(e)=>{
+            alert("you clicked container")
+        }) 
+
+        function randomcolor(){
+            let val1=Math.ceil(0+Math.random()*255);
+            let val2=Math.ceil(0+Math.random()*255);
+            let val3=Math.ceil(0+Math.random()*255);
+            return `rgb(${val1},${val2},${val3})`
+        }
+        setInterval(() => {
+            document.querySelector(".child").style.backgroundColor=randomcolor();
+        }, (2000));
+        setTimeout(() => {
+            document.querySelector(".childcontainer").style.backgroundColor=randomcolor();
+        }, 1000);
+        // clearInterval();
+        // cleartimeout();
+        </script>
+</body>
+</html>
